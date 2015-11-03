@@ -42,7 +42,7 @@ def application(request):
         source_file.flush()
 
         # Evaluate argument to run with subprocess
-        args = ['wkhtmltopdf']
+        args = ['xvfb-run', 'wkhtmltopdf']
 
         # Add Global Options
         if options:
